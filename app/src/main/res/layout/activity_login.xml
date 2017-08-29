@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="false"
+    android:gravity="end"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/guest_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageButton
+            android:id="@+id/guest_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_guest_btn"
+            android:src="@drawable/ic_person_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/action_sign_in"
+            android:textAllCaps="true"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/guest_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/autoh_color_logo"
+        android:transitionName="@string/logo" />
+
+    <TextView
+        android:id="@+id/enter_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/enter_your_pin"
+        android:textAllCaps="true"
+        android:textColor="#565757"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/pin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enter_pin"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="80dp"
+        android:background="#eaeaeb"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:src="@drawable/ic_lock_outline_black" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:focusable="false"
+                android:gravity="center"
+                android:minWidth="200dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/pin0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:textColor="#c000"
+                    android:textSize="40sp" />
+
+                <EditText
+                    android:id="@+id/pin1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:textColor="#000"
+                    android:textSize="40sp" />
+
+                <EditText
+                    android:id="@+id/pin2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:textColor="#000"
+                    android:textSize="40sp" />
+
+                <EditText
+                    android:id="@+id/pin3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:textColor="#000"
+                    android:textSize="40sp" />
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/showpwd"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="#00000000"
+                android:checked="false"
+                android:focusable="false"
+                android:foreground="@drawable/ic_eye"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="#000"
+                android:textSize="0sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#6b6b6b" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#aa6b6b6b" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bottom_design_color"
+            android:transitionName="@string/bottom" />
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:text="@string/forgot_your_pin"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/the_home_automation_app"
+            android:textAllCaps="true"
+            android:textColor="#66000000"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

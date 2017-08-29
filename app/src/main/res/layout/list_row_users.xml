@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="14dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="4dp"
+    app:cardBackgroundColor="#fff"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:rowCount="4">
+
+            <ImageView
+
+                android:layout_width="24dp"
+                android:layout_height="28dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_person_white"
+                android:tint="#99000000" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="28dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_email_black_24dp"
+                android:tint="#99000000" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="28dp"
+                android:layout_margin="5dp"
+                android:rotation="45"
+                android:src="@drawable/ic_vpn_key_black_24dp"
+                android:tint="#99000000" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="28dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_phone_black_24dp"
+                android:tint="#99000000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#fff"
+                    android:inputType="textPersonName"
+
+                    android:text="admin is here mofo"
+                    android:textColor="#a000" />
+
+                <ImageView
+                    android:id="@+id/shield"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_security_black_24dp"
+                    android:tint="#a17014"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <EditText
+
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:inputType="textEmailAddress"
+
+                android:text="@string/prompt_email"
+                android:textColor="#a000" />
+
+            <EditText
+
+                android:id="@+id/pin"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:inputType="number"
+
+                android:text="0000"
+                android:textColor="#a000" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:inputType="phone"
+
+                android:text="@string/prompt_phone"
+                android:textColor="#a000" />
+
+        </GridLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp">
+
+                <ImageButton
+                    android:id="@+id/edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="#99000000" />
+
+                <ImageButton
+                    android:id="@+id/undo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_undo_black_24dp"
+                    android:tint="#99000000"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/save"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_save"
+                android:tint="#99000000"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:tint="#b60c0e" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/adminCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/grid"
+            android:layout_margin="8dp"
+            android:text="Set as Admin"
+            android:visibility="gone" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
