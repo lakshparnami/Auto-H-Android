@@ -1,6 +1,8 @@
 ### Auto-H-Android
 Android Code for Voice and App controlled home automation system.
 
+#### Changes and Suggestions are Welcome
+
 ### Complete Project Link - 
   https://github.com/lakshparnami/auto-h
 
